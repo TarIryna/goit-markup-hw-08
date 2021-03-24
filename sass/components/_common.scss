@@ -2,10 +2,10 @@
     padding: 0 15px;
     margin: 0 auto;
     width: 450px;
-        @media (min-width: $mobile-width){
+        @media screen and(min-width: 480px){
             width: 738px;
         }
-        @media (min-width: $tablet-width){
+        @media screen and (min-width: 768px){
             width: 1200px;
         }
     }
