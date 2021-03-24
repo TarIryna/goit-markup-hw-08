@@ -1,0 +1,32 @@
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 1200px;
+            }
+ .title-h3{
+    color: $h2h3-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+    }
+.title-h2{
+    color: $h2h3-color;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    font-size: 36px;
+     line-height: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+    }
+// .header{
+//     padding-top: 32px;
+//     padding-bottom: 32px;
+//     border-bottom: 1px solid #ECECEC;
+//     }
+.features-section,     
+.team {
+        padding-top: 94px;
+    }

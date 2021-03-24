@@ -1,0 +1,32 @@
+.checkbox{
+    position: relative;
+    display: flex;
+    margin-left: 22px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: 1.71;
+
+    &__link{
+        color: $accent-color;
+        text-decoration: underline;
+    }
+    &__icon{
+        position: absolute;
+        top: 2px;
+        left: -5px;
+        background-color: #FFFFFF;
+    }
+    &__icon2{
+        position: absolute;
+        top: 2px;
+        left: -5px;
+        background-color: #FFFFFF;
+        visibility: hidden;
+        transition: visibility;
+    }
+    &__input:checked ~ .checkbox__icon2{
+        visibility: visible;
+    }
+}
