@@ -1,7 +1,7 @@
 
 .footer{
     background-color: #2F303A;
-    height: 250px;
+    // height: 250px;
     padding-top: 60px;
     padding-bottom: 60px;
     
@@ -10,12 +10,17 @@
     }
     
     & .container {
-    display: flex;
-    justify-content:space-between;
+        display: block;
+        text-align: center;
+    @media screen and (min-width: 768px){    
+        display: flex;
+        justify-content:space-between;
+      }
     }
     
     &__social-links{
-    display: block;
+        margin-top: 60px;
+        display: block;
         }
     &__title{
         font-style: normal;

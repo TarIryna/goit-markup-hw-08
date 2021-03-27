@@ -1,6 +1,7 @@
 .social{
     display: flex;
     justify-content: center;
+    align-items: center;
 
     &__item{
     display: flex;
@@ -20,7 +21,6 @@
         width: inherit;
         height: inherit;
         fill: $social-links;
-        padding: 10px;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);  
         &:hover .social__icon,
         &:focus .social__icon{
