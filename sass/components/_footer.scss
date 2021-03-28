@@ -1,9 +1,11 @@
 
 .footer{
     background-color: #2F303A;
-    // height: 250px;
     padding-top: 60px;
     padding-bottom: 60px;
+    @media screen and (min-width: 768px){
+        padding: 60px;
+    }
     
     &__logo{
         margin-bottom: 20px;
@@ -12,16 +14,27 @@
     & .container {
         display: block;
         text-align: center;
-    @media screen and (min-width: 768px){    
+    @media screen and (min-width: 1200px){    
         display: flex;
         justify-content:space-between;
       }
     }
-    
+    &__tablet{
+        @media screen and (min-width: 768px){
+        display: flex;
+        justify-content: space-between;
+        }
+    }
     &__social-links{
         margin-top: 60px;
         display: block;
+        @media screen and (min-width: 768px){
+            margin-top: 0;
         }
+        @media screen and (min-width: 1200px){
+            margin-left: 70px;
+        }
+    }
     &__title{
         font-style: normal;
         font-weight: bold;
@@ -32,7 +45,12 @@
         color: $white;
         margin-top: 12px;
         margin-bottom: 20px;
+        
+        @media screen and (min-width: 1200px){
+            text-align: left;
         }
+        }
+
     &__linkslist{
     padding: 0; 
         }

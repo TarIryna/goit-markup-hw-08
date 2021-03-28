@@ -40,9 +40,13 @@
                         +38 096 111 11 11</a> 
                     </li>
                 </ul>
+                <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu" data-open-modal2>
+                    <svg width="40" height="40" aria-label="Открыть мобильное меню">
                     <svg class="nav__menu" width="40px" height="40px">
-                        <use href="./images/icons/symbols.svg#icon-menu"></use>
+                        <use class="icon-menu" href="./images/icons/symbols.svg#icon-menu"></use>
                     </svg>
+                </button>
+                
             </nav>
         </div>
     </header>
@@ -101,20 +105,7 @@
                     <button class="modal__sendbutton">Отправить</button>
                 </div>
             </div>
-            <script>
-                const refs = {
-                    openModalBtn: document.querySelector("[data-open-modal]"),
-                    closeModalBtn: document.querySelector("[data-close-modal]"),
-                    backdrop: document.querySelector("[data-backdrop]"),
-                };
-                refs.openModalBtn.addEventListener("click", toggleModal);
-                refs.closeModalBtn.addEventListener("click", toggleModal);
-                refs.backdrop.addEventListener("click", logBackdropClick);
-
-                function toggleModal() {
-                    refs.backdrop.classList.toggle("is-hidden");
-                }
-            </script>
+           
         </section>
          <!--Особенности-->
         <section class="features">
@@ -122,7 +113,7 @@
                 <ul class="features__ul">
                     <li class="features__items">
                         <div class="features__description">
-                            <svg class="features__icon">
+                            <svg class="features__icon" width="70" height="70">
                                 <use href="./images/icons/symbols.svg#antenna"></use>
                             </svg>
                             <h3 class="features__titleh3">Внимание к деталям</h3>
@@ -131,7 +122,7 @@
                     </li>
                     <li class="features__items">
                         <div class="features__description">
-                            <svg class="features__icon">
+                            <svg class="features__icon" width="70" height="70">
                                 <use href="./images/icons/symbols.svg#clock"></use>
                             </svg>
                             <h3 class="features__titleh3">Пунктуальность</h3>
@@ -140,7 +131,7 @@
                     </li>
                     <li class="features__items">
                         <div class="features__description">
-                            <svg class="features__icon">
+                            <svg class="features__icon" width="70" height="70">
                                 <use href="./images/icons/symbols.svg#diagram"></use>
                             </svg>
                             <h3 class="features__titleh3">Планирование</h3>
@@ -149,7 +140,7 @@
                     </li>
                     <li class="features__items">
                         <div class="features__description">
-                            <svg class="features__icon">
+                            <svg class="features__icon" width="70" height="70">
                                 <use href="./images/icons/symbols.svg#astronaut"></use>
                             </svg>
                             <h3 class="features__titleh3">Современные технологии</h3>
@@ -339,42 +330,42 @@
                 <ul class="clients__icons">
                     <li class="clients__box">
                         <a class="clients__link" href="#">
-                        <svg class="clients__icon">
+                        <svg class="clients__icon" width="45" height="50">
                             <use href="./images/icons/symbols.svg#logo-1"></use>
                         </svg>
                         </a>
                     </li>
                     <li class="clients__box">
                         <a class="clients__link" href="#">
-                        <svg  class="clients__icon">
+                        <svg  class="clients__icon" width="40" height="52">
                             <use href="./images/icons/symbols.svg#logo-2"></use>
                         </svg>
                         </a>
                     </li>
                     <li class="clients__box">
                         <a class="clients__link" href="#">
-                        <svg class="clients__icon">
+                        <svg class="clients__icon" width="41" height="43">
                             <use href="./images/icons/symbols.svg#logo-3"></use>
                         </svg>
                         </a>
                     </li>
                     <li class="clients__box">
                         <a class="clients__link" href="#">
-                        <svg class="clients__icon">
+                        <svg class="clients__icon" width="80" height="42">
                             <use href="./images/icons/symbols.svg#logo-4"></use>
                         </svg>
                         </a>    
                     </li>
                     <li class="clients__box">
                         <a class="clients__link" href="#">
-                        <svg class="clients__icon">
+                        <svg class="clients__icon" width="59" height="47">
                             <use href="./images/icons/symbols.svg#logo-5"></use>
                         </svg>
                         </a>
                     </li>
                     <li class="clients__box">
                         <a class="clients__link" href="#">
-                        <svg class="clients__icon">
+                        <svg class="clients__icon" width="89" height="46">
                             <use href="./images/icons/symbols.svg#logo-6"></use>
                         </svg>
                         </a>
@@ -383,9 +374,45 @@
             </div>
         </section>
     </main>
+
+    <script>
+        const refs = {
+            openModalBtn: document.querySelector("[data-open-modal]"),
+            closeModalBtn: document.querySelector("[data-close-modal]"),
+            backdrop: document.querySelector("[data-backdrop]"),
+        };
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+        refs.backdrop.addEventListener("click", logBackdropClick);
+        
+        function toggleModal() {
+            refs.backdrop.classList.toggle("is-hidden");
+        }
+        </script>
+
+        <script>
+            const refs = {
+                openModalBtn: document.querySelector("[data-open-modal2]"),
+                closeModalBtn: document.querySelector("[data-close-modal2]"),
+                backdrop: document.querySelector("[data-backdrop2]"),
+            };
+            refs.openModalBtn.addEventListener("click", toggleModal);
+            refs.closeModalBtn.addEventListener("click", toggleModal);
+            refs.backdrop.addEventListener("click", logBackdropClick);
+            
+            function toggleModal() {
+                refs.backdrop.classList.toggle("is-hidden");
+            }
+            </script>
+
+ 
+    
+   
+
     <footer class="footer">
         <div class="container">
-            <div class="address-cont">
+            <div class="footer__tablet">
+            <div class="address__cont">
                 <div class="footer__logo">
                      <a class="logo" href="#">Web<span class="logo__footer">Studio</span></a>
                 </div>
@@ -428,12 +455,13 @@
                     </li>
                 </ul>
             </div>
+        </div>
             <div class="subscribe">
                 <form>
                     <label for="email" class="footer__title">Подпишитесь на рассылку</label>
                     <div class="subscribe__mailbtn">
                         <input class="subscribe__input" type="email" name=E-mail"" id="email" placeholder="E-mail">
-                        <button class="subscribe__button">Подписаться
+                        <button class="subscribe__button" data-close-modal2>Подписаться
                             <svg class="subscribe__icon" width="24" height="24">
                                 <use href="./images/icons/symbols.svg#iconsend"></use>
                             </svg>
@@ -443,5 +471,54 @@
             </div>
     </div>
     </footer>
+
+
+./Мобильное меню/    
+    <div class="backdrop2 is-hidden" data-backdrop2>
+        <div class="menu__modal">
+            <button class="menu-toggle js-close-menu" aria-expanded="false" aria-controls="mobile-menu"></button>
+            <ul class="menu__list1">
+                            <li class="menu__item">
+                                <a class="menu__current" href="./index.html">Студия</a>                
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./portfolio.html">Портфолио</a>                
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">Контакты</a>                
+                            </li>
+            </ul>
+            <ul class="menu__contacts">
+                            <li class="menu__item2">
+                            <a class="menu__link2" href="mailto:info@devstudio.com">info@devstudio.com</a>  
+                            </li>
+                            <li class="menu__item2">
+                                <a class="menu__link2" href="tel:+380961111111">+38 096 111 11 11</a> 
+                            </li>
+            </ul>
+            <ul class="menu__social">
+                            <li>
+                                <a href="#" class="menu__link3">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link3">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link3">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu__link3">Linkedin</a>
+                            </li>
+             </ul>
+          </div>
+      </div>
+
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>          
+
+
 </body>
 </html>
