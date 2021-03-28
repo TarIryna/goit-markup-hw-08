@@ -40,7 +40,7 @@
                         +38 096 111 11 11</a> 
                     </li>
                 </ul>
-                <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu" data-open-modal2>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" data-open-modal2>
                     <svg width="40" height="40" aria-label="Открыть мобильное меню">
                     <svg class="nav__menu" width="40px" height="40px">
                         <use class="icon-menu" href="./images/icons/symbols.svg#icon-menu"></use>
@@ -375,40 +375,6 @@
         </section>
     </main>
 
-    <script>
-        const refs = {
-            openModalBtn: document.querySelector("[data-open-modal]"),
-            closeModalBtn: document.querySelector("[data-close-modal]"),
-            backdrop: document.querySelector("[data-backdrop]"),
-        };
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-        refs.backdrop.addEventListener("click", logBackdropClick);
-        
-        function toggleModal() {
-            refs.backdrop.classList.toggle("is-hidden");
-        }
-        </script>
-
-        <script>
-            const refs = {
-                openModalBtn: document.querySelector("[data-open-modal2]"),
-                closeModalBtn: document.querySelector("[data-close-modal2]"),
-                backdrop: document.querySelector("[data-backdrop2]"),
-            };
-            refs.openModalBtn.addEventListener("click", toggleModal);
-            refs.closeModalBtn.addEventListener("click", toggleModal);
-            refs.backdrop.addEventListener("click", logBackdropClick);
-            
-            function toggleModal() {
-                refs.backdrop.classList.toggle("is-hidden");
-            }
-            </script>
-
- 
-    
-   
-
     <footer class="footer">
         <div class="container">
             <div class="footer__tablet">
@@ -461,7 +427,7 @@
                     <label for="email" class="footer__title">Подпишитесь на рассылку</label>
                     <div class="subscribe__mailbtn">
                         <input class="subscribe__input" type="email" name=E-mail"" id="email" placeholder="E-mail">
-                        <button class="subscribe__button" data-close-modal2>Подписаться
+                        <button class="subscribe__button">Подписаться
                             <svg class="subscribe__icon" width="24" height="24">
                                 <use href="./images/icons/symbols.svg#iconsend"></use>
                             </svg>
@@ -472,14 +438,17 @@
     </div>
     </footer>
 
-
-./Мобильное меню/    
-    <div class="backdrop2 is-hidden" data-backdrop2>
+<!-- /Мобильное меню/     -->
+    <div class="backdrop-menu is-hidden" data-backdrop2>
         <div class="menu__modal">
-            <button class="menu-toggle js-close-menu" aria-expanded="false" aria-controls="mobile-menu"></button>
+            <button class="menu__closebtn" aria-expanded="false" aria-controls="mobile-menu" data-close-modal2>
+                <svg class="menu__close-icon" width="19px" height="19px">
+                    <use href="./images/icons/symbols.svg#icon-close"></use>
+                </svg>
+            </button>
             <ul class="menu__list1">
                             <li class="menu__item">
-                                <a class="menu__current" href="./index.html">Студия</a>                
+                                <a class="menu__link--current" href="./index.html">Студия</a>                
                             </li>
                             <li class="menu__item">
                                 <a class="menu__link" href="./portfolio.html">Портфолио</a>                
@@ -489,35 +458,67 @@
                             </li>
             </ul>
             <ul class="menu__contacts">
-                            <li class="menu__item2">
-                            <a class="menu__link2" href="mailto:info@devstudio.com">info@devstudio.com</a>  
-                            </li>
-                            <li class="menu__item2">
-                                <a class="menu__link2" href="tel:+380961111111">+38 096 111 11 11</a> 
-                            </li>
+                <li class="menu__item2">
+                    <a class="menu__tel" href="tel:+380961111111">+38 096 111 11 11</a> 
+                </li>
+                <li class="menu__item2">
+                    <a class="menu__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>  
+                </li>      
             </ul>
             <ul class="menu__social">
-                            <li>
+                            <li class="menu__li3">
                                 <a href="#" class="menu__link3">Instagram</a>
                             </li>
-                            <li>
+                            <li class="menu__li3">
                                 <a href="#" class="menu__link3">Twitter</a>
                             </li>
-                            <li>
+                            <li class="menu__li3">
                                 <a href="#" class="menu__link3">Facebook</a>
                             </li>
-                            <li>
+                            <li class="menu__li-last">
                                 <a href="#" class="menu__link3">Linkedin</a>
                             </li>
              </ul>
           </div>
       </div>
 
-      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      <script>
+        const refs = {
+            openModalBtn: document.querySelector("[data-open-modal]"),
+            closeModalBtn: document.querySelector("[data-close-modal]"),
+            backdrop: document.querySelector("[data-backdrop]"),
+        };
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+        refs.backdrop.addEventListener("click", logBackdropClick);
+        
+        function toggleModal() {
+            refs.backdrop.classList.toggle("is-hidden");
+        }
+        </script>
+
+        <script>
+            const refs = {
+                openModalBtn: document.querySelector("[data-open-modal2]"),
+                closeModalBtn: document.querySelector("[data-close-modal2]"),
+                backdrop: document.querySelector("[data-backdrop2]"),
+            };
+            refs.openModalBtn.addEventListener("click", toggleModal);
+            refs.closeModalBtn.addEventListener("click", toggleModal);
+            refs.backdrop.addEventListener("click", logBackdropClick);
+            
+            function toggleModal() {
+                refs.backdrop.classList.toggle("is-hidden");
+            }
+            </script>
+
+ 
+    
+      <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
         crossorigin="anonymous"></script>
     <script defer src="js/mobile-menu.js"></script>
-    <script src="./js/modal.js"></script>          
+    <script src="./js/modal.js"></script>           -->
 
 
 </body>

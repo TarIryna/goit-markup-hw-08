@@ -28,7 +28,7 @@
     &.is-hidden{
         opacity: 0;
         pointer-events: none;
-    &.is-hidden .modal{
+    &.is-hidden .menu__modal{
             transform: translate(-50%,-50%) scale(1.1);
         }
     }
