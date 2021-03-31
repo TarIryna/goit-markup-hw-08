@@ -1,15 +1,17 @@
 .works{
-    // display: flex;
     position: relative;
     @media (min-width: 768px){
         display: flex;
     }
-
+    
     &__section{
         display: none;
-        @media (min-width: 1200px){
+        @media screen and (min-width: 1200px){
             display: block;
+            padding-top: 94px;
+            padding-bottom: 94px;
         }
+       
     }
 
     &__title-h3{

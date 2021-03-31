@@ -2,6 +2,10 @@
     background: #F5F4FA;
     padding-top: 60px;
     padding-bottom: 60px;
+    @media screen and (min-width: 1200px){
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 
     &__list{
         display: block;
@@ -20,6 +24,7 @@
         }
         @media (min-width: 1200px){
             flex-wrap: nowrap;
+            margin: 0;
         }
     }
     &__foto{
@@ -50,11 +55,16 @@
         margin-top: 30px;
         margin-left: 30px;
         flex-basis: calc((100% - 2 * 30px) / 2); 
-        &:not(:first-child){ 
-            margin-left: 30px;
-                }
-            }
-    }
+        }
+        @media (min-width: 1200px){
+            width: 270px;
+        }
+    
+       &:first-child{
+            margin-left: 0;
+         } 
+      }
+
     &__member{
         padding-bottom: 30px;
         background-color: $white;

@@ -16,10 +16,10 @@
                 <a class="logo" href="#">Web<span class="logo__part2">Studio</span></a>
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a class="nav__top" href="./index.html">Студия</a>                
+                        <a class="nav__current" href="./index.html">Студия</a>                
                     </li>
                     <li class="nav__item">
-                        <a class="nav__current" href="./portfolio.html">Портфолио</a>                
+                        <a class="nav__top" href="./portfolio.html">Портфолио</a>                
                     </li>
                     <li class="nav__item">
                         <a class="nav__top" href="#">Контакты</a>                
@@ -41,9 +41,13 @@
                         +38 096 111 11 11</a> 
                     </li>
                 </ul>
+                <button class="menu-toggle js-open-menu'" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="40" height="40" aria-label="Открыть мобильное меню">
                     <svg class="nav__menu" width="40px" height="40px">
-                        <use href="./images/icons/symbols.svg#icon-menu"></use>
+                        <use class="icon-menu" href="./images/icons/symbols.svg#icon-menu"></use>
                     </svg>
+                </button>
+                
             </nav>
         </div>
     </header>
@@ -283,5 +287,13 @@
             </div>
     </div>
     </footer>
+
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="js/mobile-menu.js"></script>
 </body>
 </html>

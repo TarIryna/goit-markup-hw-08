@@ -40,7 +40,7 @@
                         +38 096 111 11 11</a> 
                     </li>
                 </ul>
-                <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" data-open-modal2>
+                <button class="menu-toggle js-open-menu'" aria-expanded="false" aria-controls="mobile-menu">
                     <svg width="40" height="40" aria-label="Открыть мобильное меню">
                     <svg class="nav__menu" width="40px" height="40px">
                         <use class="icon-menu" href="./images/icons/symbols.svg#icon-menu"></use>
@@ -439,78 +439,79 @@
     </footer>
 
 <!-- /Мобильное меню/     -->
-    <div class="backdrop-menu is-hidden" data-backdrop2>
-        <div class="menu__modal">
-            <button class="menu__closebtn" aria-expanded="false" aria-controls="mobile-menu" data-close-modal2>
-                <svg class="menu__close-icon" width="19px" height="19px">
-                    <use href="./images/icons/symbols.svg#icon-close"></use>
-                </svg>
-            </button>
-            <ul class="menu__list1">
-                            <li class="menu__item">
-                                <a class="menu__link--current" href="./index.html">Студия</a>                
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="./portfolio.html">Портфолио</a>                
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">Контакты</a>                
-                            </li>
-            </ul>
-            <ul class="menu__contacts">
-                <li class="menu__item2">
-                    <a class="menu__tel" href="tel:+380961111111">+38 096 111 11 11</a> 
-                </li>
-                <li class="menu__item2">
-                    <a class="menu__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>  
-                </li>      
-            </ul>
-            <ul class="menu__social">
-                            <li class="menu__li3">
-                                <a href="#" class="menu__link3">Instagram</a>
-                            </li>
-                            <li class="menu__li3">
-                                <a href="#" class="menu__link3">Twitter</a>
-                            </li>
-                            <li class="menu__li3">
-                                <a href="#" class="menu__link3">Facebook</a>
-                            </li>
-                            <li class="menu__li-last">
-                                <a href="#" class="menu__link3">Linkedin</a>
-                            </li>
-             </ul>
-          </div>
-      </div>
+<div class="menu menu-container js-menu-container" id="mobile-menu">
+    <div class="menu__button">
+        <button class="menu-toggle js-close-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="40" height="40" aria-label="Закрыть мобильное меню">
+                <use class="icon-cross" href="./images/icons/symbols.svg#icon-close"></use>
+            </svg>
+        </button>
+    </div>
 
-      <script>
-        const refs = {
-            openModalBtn: document.querySelector("[data-open-modal]"),
-            closeModalBtn: document.querySelector("[data-close-modal]"),
-            backdrop: document.querySelector("[data-backdrop]"),
-        };
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-        refs.backdrop.addEventListener("click", logBackdropClick);
-        
-        function toggleModal() {
-            refs.backdrop.classList.toggle("is-hidden");
-        }
-        </script>
+    <ul class="menu__nav">
+        <li class="menu__item">
+            <a href="./index.html" class="menu__link-nav menu__link-nav--accent-color">Студия</a>
+        </li>
+        <li class="menu__item">
+            <a href="./portfolio.html" class="menu__link-nav">Портфолио</a>
+        </li>
+        <li class="menu__item">
+            <a href="#contacts" class="menu__link-nav">Контакты</a>
+        </li>
+    </ul>
 
-        <script>
-            const refs = {
-                openModalBtn: document.querySelector("[data-open-modal2]"),
-                closeModalBtn: document.querySelector("[data-close-modal2]"),
-                backdrop: document.querySelector("[data-backdrop2]"),
-            };
-            refs.openModalBtn.addEventListener("click", toggleModal);
-            refs.closeModalBtn.addEventListener("click", toggleModal);
-            refs.backdrop.addEventListener("click", logBackdropClick);
-            
-            function toggleModal() {
-                refs.backdrop.classList.toggle("is-hidden");
-            }
-            </script>
+    <ul class="menu__contacts">
+        <li class="menu__item">
+            <a href="tel:+380961111111" class="menu__link-tel">
+                +38 096 111 11 11
+            </a>
+        </li>
+        <li class="menu__item">
+            <a href="mailto:info@devstudio.com" class="menu__link-mail">
+                info@devstudio.com
+            </a>
+        </li>
+    </ul>
+
+    <ul class="menu__network">
+        <li class="menu__item-network">
+            <a href="#" class="menu__link-network menu__link-network--separator">Instagram</a>
+        </li>
+        <li class="menu__item-network">
+            <a href="#" class="menu__link-network menu__link-network--separator">Twitter</a>
+        </li>
+        <li class="menu__item-network">
+            <a href="#" class="menu__link-network menu__link-network--separator">Facebook</a>
+        </li>
+        <li class="menu__item-network">
+            <a href="#" class="menu__link-network">LinkedIn</a>
+        </li>
+    </ul>
+
+</div>
+
+
+<script>
+    const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+    };
+    refs.openModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+    refs.backdrop.addEventListener("click", logBackdropClick);
+    
+    function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+    }
+    </script>
+
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
+       
 
  
     
